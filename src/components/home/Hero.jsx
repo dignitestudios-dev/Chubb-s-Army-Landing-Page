@@ -22,7 +22,7 @@ const Hero = () => {
         }`,
       }}
     >
-      {/* <Navbar /> */}
+      <Navbar />
 
       <div className="flex flex-col lg:flex-row w-full gap-16 lg:gap-10 mt-20 md:mt-36">
         <div className="max-w-[700px] h-full my-auto space-y-4 sm:space-y-8">

@@ -19,10 +19,10 @@ const Home = () => {
       <Events />
       <Features />
       <Join />
-      {/* <Mission /> */}
-      {/* <Faq /> */}
-      {/* <Contact /> */}
-      {/* <Footer /> */}
+      <Mission />
+      <Faq />
+      <Contact />
+      <Footer />
     </>
   );
 };
