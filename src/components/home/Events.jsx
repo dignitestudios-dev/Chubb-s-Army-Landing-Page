@@ -12,6 +12,7 @@ const Events = () => {
 
   return (
     <section
+      id="about-us"
       className={`relative px-6 sm:px-14 md:px-20 pt-8 min-[425px]:pt-16 sm:pt-28 pb-12 min-[425px]:pb-20 sm:pb-40 ${
         isDark ? "bg-[#596646]" : "bg-[#D5B482]"
       } `}

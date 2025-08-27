@@ -66,7 +66,9 @@ const Hero = () => {
               alt="CHUBB'S ARMY"
               width={150}
               height={150}
-              className={"w-auto min-[425px]:w-[320px] min-[425px]:min-w-[240px] h-[400px] min-[425px]:h-auto"}
+              className={
+                "w-auto min-[425px]:w-[320px] min-[425px]:min-w-[240px] h-[400px] min-[425px]:h-auto"
+              }
             />
           </div>
         </div>

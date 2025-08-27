@@ -18,6 +18,7 @@ const Features = () => {
   const { isDark, bgColorStyles } = useTheme();
   return (
     <section
+    id="features"
       className="px-6 sm:px-14 md:px-20 py-16 bg-cover bg-no-repeat bg-top h-full"
       style={{
         backgroundImage: `${
@@ -160,7 +161,7 @@ const Features = () => {
 
       {/* Why this Army */}
       <div
-        id="about-us"
+        id="why-us"
         className={`${
           isDark ? "bg-[#556B2F]/80" : "bg-[#7D5B3F]"
         } flex justify-center mt-32 rounded-3xl`}

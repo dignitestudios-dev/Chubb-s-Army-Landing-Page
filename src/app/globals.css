@@ -58,6 +58,13 @@ body {
   transition: all 0.5s;
 }
 
+@media (max-width: 640px) {
+  .switch-name {
+    width: 55px;
+    height: 28px;
+  }
+}
+
 .switch-name .back {
   position: absolute;
   width: 100%;
@@ -103,3 +110,68 @@ body {
 }
 
 /* Theme toggler styles end */
+
+/* Mobile Nav styles start */
+
+/* Navbar */
+#checkbox {
+  display: none;
+}
+
+.toggle {
+  position: relative;
+  width: 36px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  transition-duration: 0.5s;
+}
+
+.bars {
+  width: 100%;
+  height: 3px;
+  background-color: #fffa;
+  border-radius: 4px;
+}
+
+#bar2 {
+  transition-duration: 0.8s;
+}
+
+#bar1,
+#bar3 {
+  width: 70%;
+}
+
+#checkbox:checked + .toggle .bars {
+  position: absolute;
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar2 {
+  transform: scaleX(0);
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar1 {
+  width: 100%;
+  transform: rotate(45deg);
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar3 {
+  width: 100%;
+  transform: rotate(-45deg);
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle {
+  transition-duration: 0.5s;
+  transform: rotate(180deg);
+}
+
+/* Mobile Nav styles end */

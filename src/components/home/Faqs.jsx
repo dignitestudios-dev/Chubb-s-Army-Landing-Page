@@ -54,7 +54,7 @@ const Faq = () => {
         alt="CHUBB'S ARMY"
         width={400}
         height={400}
-        className="absolute bottom-0 right-0 p-5 opacity-50"
+        className="absolute z-10 bottom-0 right-0 p-5 opacity-15 md:opacity-50"
       />
 
       <div className="flex flex-col items-center justify-center gap-4 lg:gap-6 w-full ">
@@ -67,7 +67,7 @@ const Faq = () => {
         </h2>
       </div>
 
-      <div className="w-full max-w-screen-xl flex flex-col items-center px-0 md:px-4 lg:px-8">
+      <div className="relative z-20 w-full max-w-screen-xl flex flex-col items-center px-0 md:px-4 lg:px-8">
         <div className="w-full max-w-screen-md space-y-5">
           {faqItems.map((item, index) => (
             <Accordion

@@ -6,39 +6,47 @@ import { MdEmail } from "react-icons/md";
 const Contact = () => {
   const { isDark } = useTheme();
   return (
-    <section className={`p-20 ${isDark ? "bg-[#596646]" : "bg-[#D5B482]"}`}>
+    <section
+      id="contact-us"
+      className={`py-10 px-6 sm:py-14 sm:px-14 md:py-20 md:px-20 ${
+        isDark ? "bg-[#596646]" : "bg-[#D5B482]"
+      }`}
+    >
       <div
-        className={`grid grid-cols-2 rounded-3xl overflow-hidden border-2 ${
+        className={`flex flex-col-reverse sm:grid sm:grid-cols-2 rounded-3xl overflow-hidden border-2 ${
           isDark ? "border-white/30" : "border-[#7D5B3F]"
         }`}
       >
         <div
-          className={`py-16 px-14 ${isDark ? "bg-[#556B2F]" : "bg-[#7D5B3F]"}`}
+          className={`py-8 px-7 md:py-16 md:px-14 ${
+            isDark ? "bg-[#556B2F]" : "bg-[#7D5B3F]"
+          }`}
         >
           <h2 className="text-3xl font-sans-medium text-white">
             Our Contact Info:
           </h2>
           <p className="text-white">
-            Please email us with any comments, suggestions or <br /> questions.
+            Please email us with any comments, suggestions or{" "}
+            <br className="hidden lg:block" /> questions.
           </p>
 
-          <div className="text-white mt-20">
+          <div className="text-white mt-8 sm:mt-20">
             <p className="font-sans-medium">Headquarters</p>
             <div className="flex items-center gap-2 mt-1.5">
               <FaLocationDot size={20} /> <p>Dallas, TX</p>
             </div>
           </div>
 
-          <div className="text-white mt-16">
+          <div className="text-white mt-8 sm:mt-16">
             <p className="font-sans-medium">Email</p>
             <div className="flex items-center gap-2 mt-1.5">
               <MdEmail size={20} /> <p>info@ChubbsArmy.com</p>
             </div>
           </div>
         </div>
-        <div className="bg-transparent p-10">
+        <div className="bg-transparent p-6 md:p-10">
           <p
-            className={`font-sans-semibold text-2xl ${
+            className={`font-sans-semibold text-xl md:text-2xl ${
               isDark ? "text-white" : "text-[#7D5B3F]"
             }`}
           >
@@ -115,7 +123,7 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className={`bg-gradient-to-l px-12 py-4 text-white font-sans-medium rounded-full ${
+              className={`mt-5 bg-gradient-to-l px-8 sm:px-12 py-2.5 sm:py-4 text-white font-sans-medium rounded-full ${
                 isDark
                   ? "from-[#C8102E] to-[#690011]"
                   : "from-[#7D5B3F] to-[#7D5B3F]"
