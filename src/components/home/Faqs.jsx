@@ -20,7 +20,7 @@ const Faq = () => {
     {
       question: "How does the rank system work?",
       answer:
-        "Just like the real Army, your pet starts as a Private (E1). By engaging with the app; liking, sharing, posting and re-posting, you earn points to to move up through the ranks, all the way to Sargent Major (E9).",
+        "Just like the real Army, your pet starts as a Private (E1). By engaging with the app; liking, sharing, posting and re-posting, you earn points to to move up through the ranks, all the way to Sergeant Major (E9).",
     },
     {
       question: "Can I connect with other pet parents?",
