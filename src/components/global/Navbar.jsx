@@ -42,13 +42,13 @@ const Navbar = () => {
                 <a href="#features">Features</a>
               </li>
               <li>
-                <a href="#why-us">WhyUs</a>
+                <a href="#why-us">Why Us</a>
               </li>
               <li>
                 <a href="#faqs">FAQ</a>
               </li>
               <li>
-                <a href="#contact-us">ContactUs</a>
+                <a href="#contact-us">Contac tUs</a>
               </li>
             </ul>
           </div>
