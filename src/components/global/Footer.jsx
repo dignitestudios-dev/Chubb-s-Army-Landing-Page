@@ -15,7 +15,7 @@ const Footer = () => {
       <div className="w-full flex flex-col lg:flex-row gap-12 xl:gap-24 mb-10">
         <div className="flex-1 min-w-[250px] flex flex-col justify-center items-center gap-5">
           <Image
-            src={isDark ? "/images/logo-dark.webp" : "/images/logo.webp"}
+            src={"/images/logo.webp"}
             alt="CHUBB'S ARMY"
             width={150}
             height={150}

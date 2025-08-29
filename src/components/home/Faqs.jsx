@@ -15,7 +15,7 @@ const Faq = () => {
     {
       question: "What are missions?",
       answer:
-        "Missions are fun challenges for pets and their humans. Like “operation treat snatch” and “zoomie challenges” where you can earn point and bragging rights.",
+        "Missions are fun challenges for pets and their humans. Like “operation treat snatch” and “zoomie challenges” where you can earn points and bragging rights.",
     },
     {
       question: "How does the rank system work?",
@@ -50,7 +50,7 @@ const Faq = () => {
       }}
     >
       <Image
-        src={isDark ? "/images/logo-dark.webp" : "/images/logo.webp"}
+        src={"/images/logo.webp"}
         alt="CHUBB'S ARMY"
         width={400}
         height={400}

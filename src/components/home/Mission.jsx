@@ -19,7 +19,7 @@ const Mission = () => {
     >
       <div className="absolute opacity-15 md:opacity-50 top-0 right-0 h-full flex items-center">
         <Image
-          src={isDark ? "/images/logo-dark.webp" : "/images/logo.webp"}
+          src={"/images/logo.webp"}
           alt="CHUBB'S ARMY"
           width={400}
           height={400}

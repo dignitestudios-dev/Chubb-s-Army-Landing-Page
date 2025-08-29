@@ -19,7 +19,7 @@ const Navbar = () => {
       <header className="px-6 sm:px-12 min-[900px]:px-20 py-3 w-full fixed top-0 left-0 z-50">
         <nav className="w-full flex items-center justify-between gap-5">
           <Image
-            src={isDark ? "/images/logo-dark.webp" : "/images/logo.webp"}
+            src={"/images/logo.webp"}
             alt="CHUBB'S ARMY"
             width={150}
             height={150}

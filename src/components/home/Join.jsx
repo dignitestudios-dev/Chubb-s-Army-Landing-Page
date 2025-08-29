@@ -13,17 +13,12 @@ const Join = () => {
     <div
       className={`px-6 sm:px-14 md:px-20 ${
         isDark ? "bg-[#596646]" : "bg-[#F5F5F5]"
-      } overflow-hidden relative bg-cover bg-right`}
-      style={{
-        backgroundImage: isDark
-          ? "url(/images/join-bg-dark.webp)"
-          : "url(/images/join-bg-light.webp)",
-      }}
+      } overflow-hidden relative`}
     >
       <div className="flex-1 lg:pe-10">
         <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
           <Image
-            src={isDark ? "/images/logo-dark.webp" : "/images/logo.webp"}
+            src={"/images/logo.webp"}
             alt="CHUBB'S ARMY"
             width={370}
             height={370}

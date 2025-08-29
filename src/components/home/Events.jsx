@@ -18,7 +18,7 @@ const Events = () => {
       } `}
     >
       <Image
-        src={isDark ? "/images/logo-dark.webp" : "/images/logo.webp"}
+        src={"/images/logo.webp"}
         alt="CHUBB'S ARMY"
         width={370}
         height={370}
