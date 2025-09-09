@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Accordion from "../common/accordion/Accordion";
 import { useTheme } from "@/contexts/ThemeContext";
+import CustomVideoPlayer from "./CustomVideoPlayer";
 
 const Faq = () => {
   const { isDark } = useTheme();
@@ -54,7 +55,7 @@ const Faq = () => {
         alt="CHUBB'S ARMY"
         width={400}
         height={400}
-        className="absolute z-10 bottom-0 right-0 p-5 opacity-15 md:opacity-50"
+        className="absolute z-10 bottom-1/2 right-0 p-5 opacity-15 md:opacity-50"
       />
 
       <div className="flex flex-col items-center justify-center gap-4 lg:gap-6 w-full ">
@@ -78,6 +79,8 @@ const Faq = () => {
           ))}
         </div>
       </div>
+
+      <CustomVideoPlayer />
     </section>
   );
 };

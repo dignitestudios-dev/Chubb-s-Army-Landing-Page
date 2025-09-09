@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useTheme } from "@/contexts/ThemeContext";
 import React from "react";
 import { FaLocationDot } from "react-icons/fa6";
@@ -5,6 +6,75 @@ import { MdEmail } from "react-icons/md";
 
 const Contact = () => {
   const { isDark } = useTheme();
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState({
+    message: "",
+    success: false,
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleStatus = (message, success) => {
+    setStatus({
+      message,
+      success,
+    });
+    setTimeout(() => {
+      setStatus({ message: "", success: true });
+    }, 5000);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Check if all required fields are filled
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.phone ||
+      !formData.message
+    ) {
+      handleStatus(
+        "Please fill in all required fields: Name, Email, Phone and Message.",
+        false
+      );
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        handleStatus("Email sent successfully!", true);
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      } else {
+        handleStatus("Failed to submit, Please try again!", false);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      handleStatus("An error occurred. Please try again.", false);
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <section
       id="contact-us"
@@ -54,7 +124,10 @@ const Contact = () => {
             touch with us to stay updated!
           </p>
 
-          <form className="tracking-wider sm:space-y-6 mt-2 sm:mt-8">
+          <form
+            onSubmit={handleSubmit}
+            className="tracking-wider sm:space-y-6 mt-2 sm:mt-8"
+          >
             <div className="mt-6">
               <label
                 className={`block mb-2 font-medium ${
@@ -65,6 +138,11 @@ const Contact = () => {
               </label>
               <input
                 type="text"
+                name="name"
+                id="name"
+                value={formData.name}
+                disabled={loading}
+                onChange={handleChange}
                 placeholder="e.g. John"
                 className={`w-full text-white border-b-2 py-2 ${
                   isDark ? "border-white/30" : "border-[#7D5B3F]"
@@ -81,7 +159,11 @@ const Contact = () => {
               </label>
               <input
                 type="email"
-                required
+                name="email"
+                id="email"
+                value={formData.email}
+                disabled={loading}
+                onChange={handleChange}
                 placeholder="e.g. john@mail.com"
                 className={`w-full text-white border-b-2 py-2 ${
                   isDark ? "border-white/30" : "border-[#7D5B3F]"
@@ -98,6 +180,11 @@ const Contact = () => {
               </label>
               <input
                 type="text"
+                name="phone"
+                id="phone"
+                value={formData.phone}
+                disabled={loading}
+                onChange={handleChange}
                 placeholder="e.g. 0491 570 156"
                 className={`w-full text-white border-b-2 py-2 ${
                   isDark ? "border-white/30" : "border-[#7D5B3F]"
@@ -115,13 +202,24 @@ const Contact = () => {
 
               <textarea
                 rows={4}
+                name="message"
+                id="message"
+                value={formData.message}
+                disabled={loading}
+                onChange={handleChange}
                 placeholder="Enter your message here"
                 className={`w-full text-white border-b-2 py-2 ${
                   isDark ? "border-white/30" : "border-[#7D5B3F]"
                 } outline-none placeholder:text-white`}
               ></textarea>
             </div>
+            {status && (
+              <p className={status.success ? "text-green-600" : "text-red-600"}>
+                {status.message}
+              </p>
+            )}
             <button
+              disabled={loading}
               type="submit"
               className={`mt-5 bg-gradient-to-l px-8 sm:px-12 py-2.5 sm:py-4 text-white font-sans-medium rounded-full ${
                 isDark
@@ -129,7 +227,7 @@ const Contact = () => {
                   : "from-[#7D5B3F] to-[#7D5B3F]"
               }`}
             >
-              Submit
+              {loading ? "Submiting..." : "Submit"}
             </button>
           </form>
         </div>
