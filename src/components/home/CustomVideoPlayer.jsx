@@ -59,7 +59,7 @@ const CustomVideoPlayer = () => {
           onPlay={() => setIsPlaying(true)}
         >
           {/* Sample video - replace with your actual video URL */}
-          <source src="/videos/intro.webm" type="video/mp4" />
+          <source src="/videos/intro.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
 
@@ -107,14 +107,6 @@ const CustomVideoPlayer = () => {
             <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
           </div>
         )}
-      </div>
-
-      {/* Video Info (optional) */}
-      <div className="mt-4 text-center">
-        <p className="text-sm text-gray-600">
-          Click the play button to start • Hover while playing to see pause
-          option
-        </p>
       </div>
     </div>
   );

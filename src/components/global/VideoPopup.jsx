@@ -160,7 +160,7 @@ const VideoPopup = ({ isOpen, onClose }) => {
             poster="/images/intro-thumbnail.jpg"
           >
             {/* Replace with your actual video URL */}
-            <source src="/videos/intro.webm" type="video/mp4" />
+            <source src="/videos/intro.webm" type="video/webm" />
             Your browser does not support the video tag.
           </video>
         </div>
