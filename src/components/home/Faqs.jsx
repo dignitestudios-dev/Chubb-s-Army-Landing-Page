@@ -79,8 +79,6 @@ const Faq = () => {
           ))}
         </div>
       </div>
-
-      <CustomVideoPlayer />
     </section>
   );
 };

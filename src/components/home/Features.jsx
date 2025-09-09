@@ -13,12 +13,13 @@ import Star4 from "../icons/Star4";
 import Star4Dark from "../icons/Star4Dark";
 import Star3Dark from "../icons/Star3Dark";
 import Star2Dark from "../icons/Star2Dark";
+import CustomVideoPlayer from "./CustomVideoPlayer";
 
 const Features = () => {
   const { isDark, bgColorStyles } = useTheme();
   return (
     <section
-    id="features"
+      id="features"
       className="px-6 sm:px-14 md:px-20 py-16 bg-cover bg-no-repeat bg-top h-full"
       style={{
         backgroundImage: `${
@@ -159,12 +160,14 @@ const Features = () => {
         <GooglePlayStoreButton varient={"colored"} />
       </div>
 
+      <CustomVideoPlayer />
+
       {/* Why this Army */}
       <div
         id="why-us"
         className={`${
           isDark ? "bg-[#556B2F]/80" : "bg-[#7D5B3F]"
-        } flex justify-center mt-32 rounded-3xl`}
+        } flex justify-center mt-12 rounded-3xl`}
       >
         <div className="relative overflow-hidden w-full grid md:grid-cols-5 lg:grid-cols-6 gap-10 xl:gap-20 px-3 sm:px-6 md:px-12 rounded-2xl">
           <>

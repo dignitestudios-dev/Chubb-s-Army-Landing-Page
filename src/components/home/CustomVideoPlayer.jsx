@@ -39,7 +39,7 @@ const CustomVideoPlayer = () => {
   const shouldShowCustomButton = !isPlaying || (isPlaying && isHovered);
 
   return (
-    <div className="relative z-20 w-full max-w-7xl mx-auto">
+    <div className="mt-16 relative z-20 w-full max-w-7xl mx-auto">
       <div
         className="relative group cursor-pointer"
         onMouseEnter={() => setIsHovered(true)}
