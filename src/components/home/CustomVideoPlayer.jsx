@@ -58,8 +58,7 @@ const CustomVideoPlayer = () => {
           onPause={() => setIsPlaying(false)}
           onPlay={() => setIsPlaying(true)}
         >
-          {/* Sample video - replace with your actual video URL */}
-          <source src="/videos/intro.webm" type="video/webm" />
+          <source src="/videos/intro.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
