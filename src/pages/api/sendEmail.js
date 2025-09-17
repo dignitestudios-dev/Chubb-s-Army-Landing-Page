@@ -224,7 +224,9 @@ export default async function handler(req, res) {
       return res.status(200).json({ success: "Submitted successfully!" });
     } catch (error) {
       console.error("Error sending email:", error);
-      return res.status(500).json({ error: "Failed to submit, Please try again!." });
+      return res
+        .status(500)
+        .json({ error: "Failed to submit, Please try again!." + error });
     }
   } else {
     res.setHeader("Allow", ["POST"]);
