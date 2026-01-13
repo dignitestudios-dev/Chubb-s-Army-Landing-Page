@@ -34,17 +34,31 @@ const Footer = () => {
             <div>
               <ul className="flex flex-col gap-5">
                 <li className="text-2xl text-white">Pages</li>
-                <li className="sm:text-lg text-white font-extralight">Home</li>
                 <li className="sm:text-lg text-white font-extralight">
-                  About Us
+                  <Link href={"#"} className="w-full">
+                    Home
+                  </Link>
                 </li>
                 <li className="sm:text-lg text-white font-extralight">
-                  Features
+                  <Link href={"#about-us"} className="w-full">
+                    About Us
+                  </Link>
                 </li>
                 <li className="sm:text-lg text-white font-extralight">
-                  Why Us
+                  <Link href={"#features"} className="w-full">
+                    Features
+                  </Link>
                 </li>
-                <li className="sm:text-lg text-white font-extralight">FAQs</li>
+                <li className="sm:text-lg text-white font-extralight">
+                  <Link href={"#why-us"} className="w-full">
+                    Why Us
+                  </Link>
+                </li>
+                <li className="sm:text-lg text-white font-extralight">
+                  <Link href={"#faqs"} className="w-full">
+                    FAQs
+                  </Link>
+                </li>
                 <li className="sm:text-lg text-white font-extralight">
                   Get App
                 </li>
@@ -54,10 +68,14 @@ const Footer = () => {
               <ul className="flex flex-col gap-5">
                 <li className="text-2xl text-white">Others</li>
                 <li className="sm:text-lg text-white font-extralight">
-                  Privacy Policy
+                  <Link href={"/privacy-policy"} className="w-full">
+                    Privacy Policy
+                  </Link>
                 </li>
                 <li className="sm:text-lg text-white font-extralight">
-                  Terms & Conditions
+                  <Link href={"/terms-and-conditions"} className="w-full">
+                    Terms & Conditions
+                  </Link>
                 </li>
               </ul>
             </div>
