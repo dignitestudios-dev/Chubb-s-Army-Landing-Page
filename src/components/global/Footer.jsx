@@ -77,6 +77,11 @@ const Footer = () => {
                     Terms & Conditions
                   </Link>
                 </li>
+                <li className="sm:text-lg text-white font-extralight">
+                  <Link href={"/child-safety-policy"} className="w-full">
+                    Child Safety Policy
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
