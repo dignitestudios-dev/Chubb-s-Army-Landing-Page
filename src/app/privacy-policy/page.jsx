@@ -147,6 +147,17 @@ export default function PrivacyPage() {
           notify you in the app or by email.
         </p>
       </section>
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold mb-4">
+          10. Phone Number Collection, Usage, and Verification
+        </h2>
+        <p>
+          For purposes of user verification and to uphold the integrity of the Chubbs Army platform, we require the collection of your phone number. During the registration process, a One-Time Password (OTP) will be sent to the phone number provided to confirm its authenticity and ensure that access is granted exclusively to genuine users. This verification process is implemented as a measure to prevent the use of false or spam numbers within our platform.
+        </p>
+        <p>
+          Your phone number will remain confidential and will not be disclosed to third-party entities, shared with external platforms, or used for any marketing or promotional activities. It is utilized solely for the purpose of verifying user identity and facilitating necessary communications between renters and boat owners as it pertains to booking and rental activities on Chubbs Army.
+        </p>
+      </section>
 
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">10. Contact Us</h2>
