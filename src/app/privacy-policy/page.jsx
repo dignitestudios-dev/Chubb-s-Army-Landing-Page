@@ -160,7 +160,7 @@ export default function PrivacyPage() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">10. Contact Us</h2>
+        <h2 className="text-2xl font-semibold mb-4">11. Contact Us</h2>
         <p>
           If you have questions about these Terms or Privacy Policy, or if you
           want to exercise your privacy rights, contact us at:
